@@ -1,0 +1,239 @@
+/* ===== Variables ===== */
+:root {
+  --rojo-400: hsl(7, 99%, 70%);
+  --amarillo-500: hsl(51, 100%, 49%);
+  --verde-800: hsl(167, 40%, 24%);
+  --azul-800: hsl(198, 62%, 26%);
+  --verde-500: hsl(167, 34%, 41%);
+
+  --gris-950: hsl(212, 27%, 19%);
+  --gris-600: hsl(213, 9%, 39%);
+  --gris-550: hsl(232, 10%, 55%);
+  --gris-400: hsl(210, 4%, 67%);
+  --blanco: hsl(0, 100%, 100%);
+
+  --fuente-texto: 'Barlow', sans-serif;
+  --fuente-titulo: 'Fraunces', serif;
+
+  --espaciado: 4rem;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  font-size: 18px;
+  color: var(--gris-950);
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+.encabezado {
+  background: url('images/desktop/image-header.jpg') no-repeat center/cover;
+  color: var(--blanco);
+  text-align: center;
+  min-height: 90vh; /* más visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-contacto {
+  background: var(--blanco);
+  color: var(--gris-950);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: var(--fuente-titulo);
+}
+
+.titulo-principal {
+  font-family: var(--fuente-titulo);
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+.flecha-hero {
+  margin: 2rem auto;
+}
+
+/* ===== Secciones ===== */
+.seccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.bloque-texto {
+  padding: var(--espaciado);
+}
+
+.bloque-texto h2 {
+  font-family: var(--fuente-titulo);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.bloque-texto p {
+  color: var(--gris-600);
+  margin-bottom: 1rem;
+}
+
+.enlace-mas {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--gris-950);
+  position: relative;
+}
+
+.enlace-mas::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: var(--amarillo-500);
+  opacity: 0.4;
+  margin-top: 0.2rem;
+}
+
+/* ===== Servicios ===== */
+.servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.servicio {
+  text-align: center;
+  position: relative;
+}
+
+.servicio img {
+  width: 100%;
+  display: block;
+}
+
+.servicio h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  margin-top: -5rem;
+  margin-bottom: 1rem;
+}
+
+.servicio.diseno h3,
+.servicio.diseno p {
+  color: var(--verde-800);
+}
+
+.servicio.fotografia h3,
+.servicio.fotografia p {
+  color: var(--azul-800);
+}
+
+/* ===== Testimonios ===== */
+.testimonios {
+  text-align: center;
+  padding: var(--espaciado) 2rem;
+}
+
+.grid-testimonios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonio img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* ===== Galería ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Footer ===== */
+.pie {
+  background: var(--verde-500);
+  text-align: center;
+  padding: 2rem;
+  color: var(--verde-800);
+}
+
+.enlaces-pie {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.enlaces-pie a {
+  color: var(--verde-800);
+  text-decoration: none;
+}
+
+.redes img {
+  margin: 0 0.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .seccion {
+    grid-template-columns: 1fr;
+  }
+
+  .servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-testimonios {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu {
+    display: none; /* aquí puedes meter el menú hamburguesa */
+  }
+
+  .titulo-principal {
+    font-size: 2rem;
+  }
+}
