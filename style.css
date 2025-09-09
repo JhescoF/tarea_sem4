@@ -103,7 +103,6 @@ body {
   margin-bottom: 1rem;
 }
 
-
 .bloque-imagen,
 .imagenes-dobles > div {
   margin: 0;
@@ -120,7 +119,6 @@ body {
   object-fit: cover;
 }
 
-
 .imagenes-dobles {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -131,7 +129,6 @@ body {
 .imagenes-dobles .bloque-texto {
   padding: 2rem;
 }
-
 
 .servicios {
   display: grid;
@@ -156,7 +153,6 @@ body {
   color: var(--azul-800);
 }
 
-
 .testimonios {
   text-align: center;
   padding: var(--espaciado) 2rem;
@@ -174,7 +170,6 @@ body {
   margin-bottom: 1rem;
 }
 
-
 .galeria {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -185,7 +180,6 @@ body {
   height: auto;
   display: block;
 }
-
 
 .pie {
   background: var(--verde-500);
@@ -211,6 +205,17 @@ body {
   margin: 0 0.5rem;
 }
 
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--blanco);
+}
+
 @media (max-width: 768px) {
   .seccion {
     grid-template-columns: 1fr;
@@ -234,7 +239,31 @@ body {
   }
 
   .menu {
-    display: none; 
+    display: none;
+    flex-direction: column;
+    background: var(--blanco);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 200px;
+  }
+
+  .menu a {
+    color: var(--gris-950);
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
   }
 
   .titulo-principal {
