@@ -1,4 +1,3 @@
-
 :root {
   --rojo-400: hsl(7, 99%, 70%);
   --amarillo-500: hsl(51, 100%, 49%);
@@ -17,7 +16,6 @@
 
   --espaciado: 4rem;
 }
-
 
 * {
   margin: 0;
@@ -64,12 +62,11 @@ body {
 
 .btn-contacto {
   background: var(--blanco);
-  
-  padding: 0.5rem 1rem;
+  color: black; 
+  padding: 0.5rem 1.2rem;
   border-radius: 20px;
   font-family: var(--fuente-titulo);
-   color: black; 
- 
+  font-weight: 700;
 }
 
 .titulo-principal {
@@ -108,7 +105,19 @@ body {
 }
 
 
-
+.imagenes-dobles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.imagenes-dobles img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.imagenes-dobles .bloque-texto {
+  padding: 2rem;
+}
 
 
 .servicios {
@@ -118,15 +127,11 @@ body {
 
 .servicio {
   text-align: center;
- 
 }
 
 .servicio img {
   width: 100%;
- 
 }
-
-
 
 .servicio.diseno h3,
 .servicio.diseno p {
@@ -198,6 +203,11 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .imagenes-dobles {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
   .servicios {
     grid-template-columns: 1fr;
   }
@@ -211,10 +221,30 @@ body {
   }
 
   .menu {
-    display: none; 
+    display: none;
   }
 
   .titulo-principal {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .titulo-principal {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
+
+  .btn-contacto {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .bloque-texto {
+    padding: 2rem 1rem;
   }
 }
